@@ -1,0 +1,9 @@
+/* ■━■━■━■ base ■━■━■━■ */
+@use "./base/reset";
+
+/* ■━■━■━■ pages ■━■━■━■ */
+@use "./pages/home";
+@use "./pages/case-study";
+
+/* ■━■━■━■ components ■━■━■━■ */
+@use "./components/case-study-card";

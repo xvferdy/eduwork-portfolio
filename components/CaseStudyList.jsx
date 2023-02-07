@@ -1,13 +1,13 @@
 import React from "react";
 import CaseStudyCard from "./CaseStudyCard";
 
-function CaseStudyList() {
+function CaseStudyList({ caseStudies }) {
   return (
-    <>
-      {[...Array(3)].map((caseStudy) => (
-        <CaseStudyCard />
+    <section>
+      {caseStudies.map((caseStudy) => (
+        <CaseStudyCard key={caseStudy.sys.id} caseStudy={caseStudy} />
       ))}
-    </>
+    </section>
   );
 }
 export default CaseStudyList;

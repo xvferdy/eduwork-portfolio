@@ -1,7 +1,7 @@
 import React from "react";
 
-function Chips() {
-  return <div>Chips</div>;
+function Chips({ label }) {
+  return <div>{label}</div>;
 }
 
 export default Chips;

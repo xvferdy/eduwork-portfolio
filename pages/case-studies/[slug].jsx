@@ -1,5 +1,7 @@
 import React from "react";
 import { createClient } from "contentful";
+import ReactMarkdown from "react-markdown";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function CaseStudy({ caseStudy }) {
   const {
@@ -10,6 +12,7 @@ function CaseStudy({ caseStudy }) {
     projectMockup,
     slug,
     nextSteps,
+    content,
   } = caseStudy.fields;
   return (
     <main className="main">
@@ -20,7 +23,8 @@ function CaseStudy({ caseStudy }) {
         </div>
         <div className="container case-study__container">
           <h3 className="case-study__header">title header</h3>
-          <div>{nextSteps}</div>
+          <div>{documentToReactComponents(content)}</div>
+          <ReactMarkdown>{nextSteps}</ReactMarkdown>
         </div>
       </section>
     </main>

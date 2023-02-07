@@ -1,1 +1,39 @@
-// HAPUS
+.case-study {
+  // markdown
+  ul {
+    padding-left: 20px;
+    li {
+      list-style-type: circle;
+    }
+  }
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  // box-sizing: inherit;
+}
+
+/* 
+intro
+design process --> contentful rich text styling (html tag included: <blockquote/> <p/>, <code/>, )
+outro 
+ */
+blockquote {
+  background-color: #8f8a53;
+}
+.AnimatedEllipsis {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  &::after {
+    display: inline-block;
+    content: "...";
+    animation: AnimatedEllipsis-keyframes 1.2s steps(4, jump-none) infinite;
+  }
+  @keyframes AnimatedEllipsis-keyframes {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+}

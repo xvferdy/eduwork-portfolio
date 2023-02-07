@@ -1,10 +1,13 @@
 .case-study {
-  // markdown
+  /* markdown */
   ul {
     padding-left: 20px;
     li {
       list-style-type: circle;
     }
+  }
+  img {
+    object-fit: contain;
   }
 
   margin: 0;

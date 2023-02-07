@@ -2,6 +2,32 @@ import React from "react";
 import { createClient } from "contentful";
 import ReactMarkdown from "react-markdown";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+import Image from "next/image";
+
+// const contentfulLoader = ({ src }) => {
+//   return src;
+// };
+
+const options = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+      console.log(node.data.target.fields.file.url);
+      return (
+        <Image
+          src={`https:${node.data.target.fields.file.url}`}
+          // src={ node.data.target.fields.file.url}
+          height={node.data.target.fields.file.details.image.height}
+          width={node.data.target.fields.file.details.image.width}
+          // height={100}
+          // width={100}
+          alt={node.data.target.fields.title}
+          // loader={contentfulLoader}
+        />
+      );
+    },
+  },
+};
 
 function CaseStudy({ caseStudy }) {
   const {
@@ -12,8 +38,9 @@ function CaseStudy({ caseStudy }) {
     projectMockup,
     slug,
     nextSteps,
-    content,
+    projectContent,
   } = caseStudy.fields;
+  console.log(projectContent);
   return (
     <main className="main">
       <section className="case-study">
@@ -23,7 +50,9 @@ function CaseStudy({ caseStudy }) {
         </div>
         <div className="container case-study__container">
           <h3 className="case-study__header">title header</h3>
-          <div>{documentToReactComponents(content)}</div>
+          <div className="case-study__content">
+            {documentToReactComponents(projectContent, options)}
+          </div>
           <ReactMarkdown>{nextSteps}</ReactMarkdown>
         </div>
       </section>

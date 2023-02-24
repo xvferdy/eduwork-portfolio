@@ -1,0 +1,27 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+%section {
+  // min-height: 100vh;
+  min-height: auto;
+  // padding: 2.4rem 0;
+
+  // MEDIA-QUERIES
+  @include display(tab-port) {
+  }
+  @include display(phone) {
+  }
+}
+
+%container {
+  max-width: $width-lg;
+  margin: 0 auto;
+
+  // MEDIA-QUERIES
+  @include display(tab-port) {
+    max-width: $width-md;
+  }
+  @include display(phone) {
+    max-width: $width-sm;
+  }
+}

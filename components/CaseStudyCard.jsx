@@ -5,8 +5,19 @@ import Button from "./Button";
 import Image from "next/image";
 
 function CaseStudyCard({ caseStudy }) {
-  const { title, tags, projectBrief, projectBanner, projectMockup, slug } =
-    caseStudy.fields;
+  const {
+    title,
+    tags,
+    projectBrief,
+    projectBanner,
+    projectMockup,
+    slug,
+    projectWorkflow,
+  } = caseStudy.fields;
+
+  // const { img } = caseStudy.fields.projectMockup.fields.file.url;
+
+  // console.log(caseStudy.fields.projectMockup);
 
   return (
     <section className="card">
@@ -29,8 +40,8 @@ function CaseStudyCard({ caseStudy }) {
             src={`https:${projectMockup.fields.file.url}`}
             width={190}
             height={190}
-            placeholder="blur"
-            blurDataURL={`https:${projectMockup.fields.file.url}`}
+            // placeholder="blur"
+            // blurDataURL={`https:${projectMockup.fields.file.url}`}
             // fill
           />
         </div>

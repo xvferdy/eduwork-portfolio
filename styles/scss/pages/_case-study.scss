@@ -1,20 +1,194 @@
-.case-study {
-  /* markdown */
-  ul {
-    padding-left: 20px;
-    li {
-      list-style-type: circle;
-    }
-  }
-  img {
-    object-fit: contain;
+@use "../abstracts/" as *;
+
+.case-study-main {
+  min-height: 100vh;
+  display: grid;
+  gap: 80px;
+
+  blockquote {
+    position: relative;
+    text-align: left;
+    // padding: 1.2em 0 2em 38px;
+    padding: 0 0 2em 38px;
+    border: none;
+    // margin: 20px auto 20px;
+    margin-top: 16px;
+    max-width: 800px;
+    width: 100%;
+    display: block;
   }
 
-  margin: 0;
-  padding: 0;
-  border: 0;
-  text-decoration: none;
-  // box-sizing: inherit;
+  blockquote:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    color: $color-primary-green-50;
+    top: 0;
+    background: -moz-linear-gradient(
+      top,
+      $color-primary-green-50 0%,
+      $color-primary-green-50 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      $color-primary-green-50 0%,
+      $color-primary-green-50 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    /* background: linear-gradient(to bottom,#66cc66 0%,#66cc66 60%,rgba(255,255,255,0) 100%); */
+  }
+
+  blockquote:before {
+    // content: "\f10d";
+    // font-family: "fontawesome";
+    content: "🧐";
+    font-size: 16px;
+    display: block;
+    margin-bottom: 0.8em;
+    font-weight: 400;
+    color: $color-primary-green-50;
+  }
+
+  blockquote > cite,
+  blockquote > p > cite {
+    display: block;
+    font-size: 16px;
+    line-height: 1.3em;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 1.1em;
+    letter-spacing: 0;
+    font-style: italic;
+  }
+
+  /* BANNER */
+  .banner {
+    &__container {
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+    }
+    &__mockup {
+      max-height: 80vh;
+      padding: 24px 0;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  /* TITLE */
+  .title {
+    @extend %section;
+    &__container {
+      @extend %container;
+      display: grid;
+    }
+    &__chips {
+      display: flex;
+    }
+  }
+
+  /* INTRO */
+  .intro {
+    @extend %section;
+    h2 {
+      margin-bottom: 8px;
+    }
+    &__container {
+      @extend %container;
+      display: grid;
+      gap: 32px;
+    }
+    .bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      .left,
+      .right {
+        display: grid;
+        gap: 32px;
+      }
+    }
+  }
+
+  /* WORKFLOW */
+  .workflow {
+    @extend %section;
+    h2 {
+      margin-bottom: 40px;
+    }
+    &__container {
+      @extend %container;
+      display: grid;
+    }
+  }
+
+  /* EMPATHY */
+  .empathize,
+  .define,
+  .ideate,
+  .prototype,
+  .test {
+    @extend %section;
+    &__container {
+      @extend %container;
+      display: grid;
+
+      & > p {
+        margin-top: 16px;
+      }
+      & > ul {
+        margin-top: 16px;
+        padding-left: 20px;
+        li {
+          list-style: disc;
+          color: $color-neutral-20;
+        }
+      }
+      h5 {
+        margin-bottom: 4px;
+        margin-top: 80px;
+        color: $color-primary-green-50;
+        font-weight: 800;
+      }
+      h2 {
+        margin-bottom: 24px; //40px-paragraph padding-top
+      }
+      h3 {
+        margin-top: 32px;
+      }
+      h3 + p,
+      h3 + ul {
+        margin-top: 8px !important;
+      }
+      > img {
+        margin-top: 16px;
+      }
+    }
+  }
+  // .content {
+  //   /* markdown */
+  //   ul {
+  //     padding-left: 20px;
+  //     li {
+  //       list-style-type: circle;
+  //     }
+  //   }
+  //   img {
+  //     object-fit: contain;
+  //   }
+
+  //   margin: 0;
+  //   padding: 0;
+  //   border: 0;
+  //   text-decoration: none;
+  //   // box-sizing: inherit;
+  // }
 }
 
 /* 
@@ -22,21 +196,21 @@ intro
 design process --> contentful rich text styling (html tag included: <blockquote/> <p/>, <code/>, )
 outro 
  */
-blockquote {
-  background-color: #8f8a53;
-}
-.AnimatedEllipsis {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: bottom;
-  &::after {
-    display: inline-block;
-    content: "...";
-    animation: AnimatedEllipsis-keyframes 1.2s steps(4, jump-none) infinite;
-  }
-  @keyframes AnimatedEllipsis-keyframes {
-    0% {
-      transform: translateX(-100%);
-    }
-  }
-}
+// blockquote {
+//   background-color: #8f8a53;
+// }
+// .AnimatedEllipsis {
+//   display: inline-block;
+//   overflow: hidden;
+//   vertical-align: bottom;
+//   &::after {
+//     display: inline-block;
+//     content: "...";
+//     animation: AnimatedEllipsis-keyframes 1.2s steps(4, jump-none) infinite;
+//   }
+//   @keyframes AnimatedEllipsis-keyframes {
+//     0% {
+//       transform: translateX(-100%);
+//     }
+//   }
+// }

@@ -1,15 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
+
 import CaseStudyCard from "@/components/CaseStudyCard";
 import SideProfile from "@/components/SideProfile";
 import CaseStudyList from "@/components/CaseStudyList";
 import { createClient } from "contentful";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home({ caseStudies }) {
-  // console.log(caseStudies);
+  // console.log(caseStudies[0].fields.projectWorkflow);
   return (
     <>
       <Head>

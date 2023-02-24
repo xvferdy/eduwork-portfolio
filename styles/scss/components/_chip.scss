@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.chip {
+  background-color: $color-primary-green-20;
+  color: $color-primary-green-50;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 100px;
+  border: 0.8px solid $color-neutral-10;
+}

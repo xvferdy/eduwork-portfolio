@@ -23,8 +23,6 @@ const options = {
           height={540}
           width={960}
           alt={node.data.target.fields.title}
-          // fill
-          // loader={contentfulLoader}
         />
       );
     },
@@ -59,22 +57,38 @@ function CaseStudy({ caseStudy }) {
       {/* BANNER */}
       <section
         className="banner"
-        style={{
-          // backgroundImage: `url("https:${projectBanner.fields.file.url}")`,
-          background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(16, 13, 13, 0.82) 44.27%, rgba(21, 17, 17, 0.9424) 71.87%, #191414 100%), url(https:${projectBanner.fields.file.url})`,
-          // backgroundColor: "#191414",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          // backgroundAttachment: "fixed",
-        }}
+        // style={{
+        //   // backgroundImage: `url("https:${projectBanner.fields.file.url}")`,
+        //   background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(16, 13, 13, 0.82) 44.27%, rgba(21, 17, 17, 0.9424) 71.87%, #191414 100%), url(https:${projectBanner.fields.file.url})`,
+        //   // backgroundColor: "#191414",
+        //   backgroundPosition: "center",
+        //   backgroundSize: "cover",
+        //   backgroundRepeat: "no-repeat",
+        //   // backgroundAttachment: "fixed",
+        // }}
       >
         <div className="container banner__container">
+          <div
+            className="banner__bg"
+            // style={{ width: "1000px", height: "1000px", position: "relative" }}
+          >
+            <Image
+              src={`https:${projectBanner.fields.file.url}`}
+              // fill
+              // width={1199}
+              // height={615}
+              width={969}
+              height={497}
+              priority
+            />
+          </div>
+
           <div className="banner__mockup">
             <Image
               src={`https:${projectMockup.fields.file.url}`}
               height={568}
               width={285}
+              // priority
               // fill
               // alt="food"
               // placeholder="blur"
@@ -113,10 +127,10 @@ function CaseStudy({ caseStudy }) {
               <div className="intro__team">
                 <h3>Team</h3>
                 {team.map((person, idx) => (
-                  <span key={idx}>
+                  <p style={{ display: "inline" }} key={idx}>
                     {person}
                     {idx < team.length - 1 && ", "}
-                  </span>
+                  </p>
                 ))}
               </div>
               <div className="intro__role">

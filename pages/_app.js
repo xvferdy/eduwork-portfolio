@@ -10,7 +10,7 @@ const raleway = Raleway({
 export default function App({ Component, pageProps }) {
   return (
     <div className={raleway.className}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </div>
   );
 }

@@ -10,17 +10,18 @@
   padding: 20px 34px;
   border-radius: 8px;
   cursor: pointer;
-  // transition: $transition;
+  transition: $transition;
   font-weight: 500;
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  border: 1px solid transparent;
   &:hover {
-    background-color: $color-neutral-10;
-    color: $color-neutral-80;
-    border-color: transparent;
+    background-color: transparent;
+    border-color: $color-primary-green-50;
+    color: $color-neutral-10;
   }
   &--primary {
     color: $color-neutral-80;

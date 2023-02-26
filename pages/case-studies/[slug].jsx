@@ -5,6 +5,10 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
 import Chip from "@/components/Chip";
+import { TfiLayoutMenuSeparated } from "react-icons/fi";
+import { BiAbacus } from "react-icons/bi";
+import Divider from "@/components/Divider";
+import Link from "next/link";
 
 // const contentfulLoader = ({ src }) => {
 //   return src;
@@ -49,175 +53,208 @@ function CaseStudy({ caseStudy }) {
     prototypeContent,
     testContent,
     takeaways,
-    learning,
+    learnings,
   } = caseStudy.fields;
 
   return (
-    <main className="case-study-main">
-      {/* BANNER */}
-      <section
-        className="banner"
-        // style={{
-        //   // backgroundImage: `url("https:${projectBanner.fields.file.url}")`,
-        //   background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(16, 13, 13, 0.82) 44.27%, rgba(21, 17, 17, 0.9424) 71.87%, #191414 100%), url(https:${projectBanner.fields.file.url})`,
-        //   // backgroundColor: "#191414",
-        //   backgroundPosition: "center",
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        //   // backgroundAttachment: "fixed",
-        // }}
-      >
-        <div className="container banner__container">
-          <div
-            className="banner__bg"
-            // style={{ width: "1000px", height: "1000px", position: "relative" }}
-          >
-            <Image
-              src={`https:${projectBanner.fields.file.url}`}
-              // fill
-              // width={1199}
-              // height={615}
-              width={969}
-              height={497}
-              priority
-            />
-          </div>
-
-          <div className="banner__mockup">
-            <Image
-              src={`https:${projectMockup.fields.file.url}`}
-              height={568}
-              width={285}
-              // priority
-              // fill
-              // alt="food"
-              // placeholder="blur"
-              // blurDataURL={menuItem.img}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* TITLE */}
-      <section className="title">
-        <div className="container title__container">
-          <h1 className="title__title">{title}</h1>
-          <div className="title__chips">
-            {tags.map((tag, idx) => (
-              <Chip key={idx} label={tag} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INTRO */}
-      <section className="intro">
-        <div className="container intro__container">
-          <h2>Introduction</h2>
-          <div className="intro__brief">
-            <h3>Project Brief</h3>
-            <ReactMarkdown>{projectBrief}</ReactMarkdown>
-          </div>
-          <div className="intro__goals">
-            <h3>Project Goals</h3>
-            <ReactMarkdown>{projectGoals}</ReactMarkdown>
-          </div>
-          <div className="bottom">
-            <div className="left">
-              <div className="intro__team">
-                <h3>Team</h3>
-                {team.map((person, idx) => (
-                  <p style={{ display: "inline" }} key={idx}>
-                    {person}
-                    {idx < team.length - 1 && ", "}
-                  </p>
-                ))}
-              </div>
-              <div className="intro__role">
-                <h3>Role</h3>
-                <ReactMarkdown>{role}</ReactMarkdown>
-              </div>
+    <>
+      <main className="case-study-main">
+        {/* BANNER */}
+        <section
+          className="banner"
+          // style={{
+          //   // backgroundImage: `url("https:${projectBanner.fields.file.url}")`,
+          //   background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(16, 13, 13, 0.82) 44.27%, rgba(21, 17, 17, 0.9424) 71.87%, #191414 100%), url(https:${projectBanner.fields.file.url})`,
+          //   // backgroundColor: "#191414",
+          //   backgroundPosition: "center",
+          //   backgroundSize: "cover",
+          //   backgroundRepeat: "no-repeat",
+          //   // backgroundAttachment: "fixed",
+          // }}
+        >
+          <div className="container banner__container">
+            <div
+              className="banner__bg"
+              // style={{ width: "1000px", height: "1000px", position: "relative" }}
+            >
+              <Image
+                src={`https:${projectBanner.fields.file.url}`}
+                // fill
+                // width={1199}
+                // height={615}
+                width={969}
+                height={497}
+                priority
+              />
             </div>
-            <div className="right">
-              <div className="intro__duration">
-                <h3>Project Duration</h3>
-                <ReactMarkdown>{projectDuration}</ReactMarkdown>
-              </div>
-              <div className="intro__type">
-                <h3>Project Type</h3>
-                <ReactMarkdown>{projectType}</ReactMarkdown>
-              </div>
+
+            <div className="banner__mockup">
+              <Image
+                src={`https:${projectMockup.fields.file.url}`}
+                height={568}
+                width={285}
+                // priority
+                // fill
+                // alt="food"
+                // placeholder="blur"
+                // blurDataURL={menuItem.img}
+              />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* WORKFLOW */}
-      <section className="workflow">
-        <div className="container workflow__container">
-          <h2>Project Workflow</h2>
-          <div className="workflow__image">
-            <Image
-              src={`https:${projectWorkflow.fields.file.url}`}
-              height={410}
-              width={930}
-              // fill
-              // alt="food"
-              // placeholder="blur"
-              // blurDataURL={menuItem.img}
-            />
+        {/* TITLE */}
+        <section className="title">
+          <div className="container title__container">
+            <h1 className="title__title">{title}</h1>
+            <div className="title__chips">
+              {tags.map((tag, idx) => (
+                <Chip key={idx} label={tag} />
+              ))}
+            </div>
           </div>
+        </section>
+
+        {/* INTRO */}
+        <section className="intro">
+          <div className="container intro__container">
+            <h2>Introduction</h2>
+            <div className="intro__brief">
+              <h3>Project Brief</h3>
+              <ReactMarkdown>{projectBrief}</ReactMarkdown>
+            </div>
+            <div className="intro__goals">
+              <h3>Project Goals</h3>
+              <ReactMarkdown>{projectGoals}</ReactMarkdown>
+            </div>
+            <div className="bottom">
+              <div className="left">
+                <div className="intro__team">
+                  <h3>Team</h3>
+                  {team.map((person, idx) => (
+                    <p style={{ display: "inline" }} key={idx}>
+                      {person}
+                      {idx < team.length - 1 && ", "}
+                    </p>
+                  ))}
+                </div>
+                <div className="intro__role">
+                  <h3>Role</h3>
+                  <ReactMarkdown>{role}</ReactMarkdown>
+                </div>
+              </div>
+              <div className="right">
+                <div className="intro__duration">
+                  <h3>Project Duration</h3>
+                  <ReactMarkdown>{projectDuration}</ReactMarkdown>
+                </div>
+                <div className="intro__type">
+                  <h3>Project Type</h3>
+                  <ReactMarkdown>{projectType}</ReactMarkdown>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* WORKFLOW */}
+        <section className="workflow">
+          <div className="container workflow__container">
+            <h2>Project Workflow</h2>
+            <div className="workflow__image">
+              <Image
+                src={`https:${projectWorkflow.fields.file.url}`}
+                height={410}
+                width={930}
+                // fill
+                // alt="food"
+                // placeholder="blur"
+                // blurDataURL={menuItem.img}
+              />
+            </div>
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* EMPATHY */}
+        <section className="empathize">
+          <div className="container empathize__container">
+            <div className="phase">Understand The Problem</div>
+            {documentToReactComponents(empathizeContent, options)}
+          </div>
+        </section>
+
+        {/* DEFINE */}
+        <section className="define">
+          <div className="container define__container">
+            <div className="phase">Defining The Problem</div>
+            {documentToReactComponents(defineContent, options)}
+          </div>
+        </section>
+
+        {/* IDEATE */}
+        <section className="ideate">
+          <div className="container ideate__container">
+            <div className="phase">Ideation</div>
+            {documentToReactComponents(ideateContent, options)}
+          </div>
+        </section>
+
+        {/* PROTOTYPE */}
+        <section className="prototype">
+          <div className="container prototype__container">
+            <div className="phase">Design</div>
+            {documentToReactComponents(prototypeContent, options)}
+          </div>
+        </section>
+
+        {/* TEST */}
+        <section className="test">
+          <div className="container test__container">
+            <div className="phase">Test</div>
+            {documentToReactComponents(testContent, options)}
+          </div>
+        </section>
+
+        <Divider />
+
+        {/* OUTCOMES */}
+        <section className="outcomes">
+          <div className="container outcomes__container">
+            <h2>Outcomes</h2>
+            <div className="outcomes__content">
+              <ReactMarkdown>{takeaways}</ReactMarkdown>
+            </div>
+          </div>
+        </section>
+
+        {/* LEARNINGS */}
+        <section className="learnings">
+          <div className="container learnings__container">
+            <h2>Learnings</h2>
+            <div className="learnings__content">
+              <ReactMarkdown>{learnings}</ReactMarkdown>
+            </div>
+          </div>
+        </section>
+
+        <Divider />
+      </main>
+
+      {/* FOOTER */}
+      <footer>
+        <div className="container">
+          <p>
+            Thank you for reading! I'd love to hear of any feedback from you for
+            this article. Say hi to me at berlianto.ferdynand@gmail.com
+          </p>
+          <Link className="btn btn--primary" href={`/`}>
+            Back to Homepage
+          </Link>
         </div>
-      </section>
-
-      {/* <hr /> */}
-
-      {/* EMPATHY */}
-      <section className="empathize">
-        <div className="container empathize__container">
-          <div className="phase">Understand The Problem</div>
-          {documentToReactComponents(empathizeContent, options)}
-        </div>
-      </section>
-
-      <section className="define">
-        <div className="container define__container">
-          <div className="phase">Defining The Problem</div>
-          {documentToReactComponents(defineContent, options)}
-        </div>
-      </section>
-
-      <section className="ideate">
-        <div className="container ideate__container">
-          <div className="phase">Ideation</div>
-          {documentToReactComponents(ideateContent, options)}
-        </div>
-      </section>
-
-      <section className="prototype">
-        <div className="container prototype__container">
-          <div className="phase">Design</div>
-          {documentToReactComponents(prototypeContent, options)}
-        </div>
-      </section>
-
-      <section className="test">
-        <div className="container test__container">
-          <div className="phase">Test</div>
-          {documentToReactComponents(testContent, options)}
-        </div>
-      </section>
-
-      <hr />
-
-      <section className="outcomes">
-        <div className="container outcomes__container">outcomes content</div>
-      </section>
-
-      <section className="learning">
-        <div className="container learning__container">learning content</div>
-      </section>
-    </main>
+      </footer>
+    </>
   );
 }
 

@@ -72,7 +72,7 @@
   .intro {
     @extend %section;
     h2 {
-      margin-bottom: 8px;
+      // margin-bottom: 8px; //40px-32px
     }
     &__container {
       @extend %container;
@@ -98,7 +98,8 @@
   .workflow {
     // @extend %section;
     h2 {
-      margin-bottom: 40px;
+      // margin-bottom: 40px;
+      margin-bottom: 32px;
     }
     &__container {
       @extend %container;
@@ -120,7 +121,7 @@
     &__container {
       @extend %container;
       // display: grid;
-
+      // border: 1px solid #a72828;
       & > p {
         margin-top: 16px;
       }
@@ -134,12 +135,14 @@
       }
       h5 {
         margin-bottom: 4px;
-        margin-top: 80px;
+        margin-top: 40px;
         color: $color-primary-green-50;
         font-weight: 800;
       }
       h2 {
-        margin-bottom: 24px; //40px-paragraph padding-top
+        // margin-bottom: 24px; //40px-paragraph padding-top
+        // margin-bottom: 40px; //margin sifat tidak stuck
+        margin-bottom: 32px; //jangan 40? diatas 32px
       }
       h3 {
         margin-top: 32px;
@@ -159,48 +162,64 @@
         display: flex;
         justify-content: center;
       }
+      b {
+        // background-color: $color-primary-green-50;
+        // color: $color-neutral-80;
+      }
+      a {
+        font-size: 16px;
+        line-height: auto;
+        font-weight: bold;
+        color: $color-neutral-10;
+        text-decoration: underline;
+        transition: $transition;
+        &:hover {
+          color: $color-primary-green-50;
+        }
+      }
     }
   }
-  // .content {
-  //   /* markdown */
-  //   ul {
-  //     padding-left: 20px;
-  //     li {
-  //       list-style-type: circle;
-  //     }
-  //   }
-  //   img {
-  //     object-fit: contain;
-  //   }
+  .outcomes {
+    &__container {
+      @extend %container;
+      display: grid;
+      // gap: 40px;
+      gap: 16px; //32px-16px
+    }
 
-  //   margin: 0;
-  //   padding: 0;
-  //   border: 0;
-  //   text-decoration: none;
-  //   // box-sizing: inherit;
-  // }
+    &__content {
+      p {
+        // border: 1px solid #000;
+        margin-top: 16px;
+      }
+    }
+  }
+  .learnings {
+    &__container {
+      @extend %container;
+      display: grid;
+      // gap: 40px;
+      gap: 16px; //32px-16px
+    }
+    &__content {
+      p {
+        // border: 1px solid #000;
+        margin-top: 16px;
+      }
+    }
+  }
 }
 
-/* 
-intro
-design process --> contentful rich text styling (html tag included: <blockquote/> <p/>, <code/>, )
-outro 
- */
-// blockquote {
-//   background-color: #8f8a53;
-// }
-// .AnimatedEllipsis {
-//   display: inline-block;
-//   overflow: hidden;
-//   vertical-align: bottom;
-//   &::after {
-//     display: inline-block;
-//     content: "...";
-//     animation: AnimatedEllipsis-keyframes 1.2s steps(4, jump-none) infinite;
-//   }
-//   @keyframes AnimatedEllipsis-keyframes {
-//     0% {
-//       transform: translateX(-100%);
-//     }
-//   }
-// }
+footer {
+  // border: 1px solid #000;
+  .container {
+    @extend %container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    // border: 1px solid #000;
+    margin: 80px auto;
+  }
+}

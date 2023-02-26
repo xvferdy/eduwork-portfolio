@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+.side-profile {
+  @extend %section;
+  // flex-basis: 30%;
+  width: 418px;
+  border: 1px solid #d30c0c;
+  &__container {
+    // @extend %container;
+  }
+  &__img {
+    // height: 396px;
+    img {
+      object-fit: cover;
+    }
+  }
+}

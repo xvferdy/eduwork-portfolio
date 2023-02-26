@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image";
+import Chip from "@/components/Chip";
+import { FaLocationArrow } from "react-icons/fa";
 
 function CaseStudyCard({ caseStudy }) {
   const {
@@ -11,6 +13,7 @@ function CaseStudyCard({ caseStudy }) {
     projectBanner,
     projectMockup,
     slug,
+    thumbBrief,
     projectWorkflow,
   } = caseStudy.fields;
 
@@ -21,12 +24,29 @@ function CaseStudyCard({ caseStudy }) {
   return (
     <section className="card">
       <div className="container card__container">
+        {/* BG */}
+        <div className="card__banner">
+          <Image
+            src={`https:${projectBanner.fields.file.url}`}
+            width={969}
+            height={497}
+            // width={1199}
+            // height={615}
+            priority
+          />
+        </div>
+
         {/* Desc */}
         <div className="card__description">
-          <h2>{title}</h2>
-          <p>{projectBrief}</p>
+          <div className="card__description-chips">
+            {tags.map((tag, idx) => (
+              <Chip key={idx} label={tag} />
+            ))}
+          </div>
+          <h2 className="card__title">{title}</h2>
+          <p className="card__brief">{thumbBrief}</p>
           <Link className="btn btn--primary" href={`/case-studies/${slug}`}>
-            see
+            View Project <FaLocationArrow />
           </Link>
         </div>
 

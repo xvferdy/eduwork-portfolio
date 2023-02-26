@@ -3,10 +3,12 @@ import CaseStudyCard from "./CaseStudyCard";
 
 function CaseStudyList({ caseStudies }) {
   return (
-    <section>
-      {caseStudies.map((caseStudy) => (
-        <CaseStudyCard key={caseStudy.sys.id} caseStudy={caseStudy} />
-      ))}
+    <section className="case-study-list">
+      <div className="container case-study-list__container">
+        {caseStudies.map((caseStudy) => (
+          <CaseStudyCard key={caseStudy.sys.id} caseStudy={caseStudy} />
+        ))}
+      </div>
     </section>
   );
 }

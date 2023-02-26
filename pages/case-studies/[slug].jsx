@@ -156,7 +156,7 @@ function CaseStudy({ caseStudy }) {
       <section className="workflow">
         <div className="container workflow__container">
           <h2>Project Workflow</h2>
-          <div className="intro__workflow-image">
+          <div className="workflow__image">
             <Image
               src={`https:${projectWorkflow.fields.file.url}`}
               height={410}

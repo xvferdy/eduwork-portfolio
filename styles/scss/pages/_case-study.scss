@@ -23,6 +23,7 @@
       height: 100%;
       // border: 1px solid #ca1515;
       img {
+        height: 100%;
         object-fit: cover;
       }
       &::before {
@@ -46,6 +47,7 @@
       padding: 24px 0;
       img {
         object-fit: contain;
+        height: 100%;
       }
     }
   }
@@ -92,13 +94,17 @@
 
   /* WORKFLOW */
   .workflow {
-    @extend %section;
+    // @extend %section;
     h2 {
       margin-bottom: 40px;
     }
     &__container {
       @extend %container;
-      display: grid;
+    }
+    &__image {
+      img {
+        height: 100%;
+      }
     }
   }
 
@@ -142,6 +148,7 @@
       }
       > img {
         margin-top: 16px;
+        height: 100%;
       }
       img + p {
         color: $color-neutral-40;

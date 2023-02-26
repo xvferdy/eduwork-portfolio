@@ -1,16 +1,41 @@
 @use "../abstracts/" as *;
 .side-profile {
   @extend %section;
-  // flex-basis: 30%;
+  // flex-basis: 25%;
+  align-self: flex-start;
+  position: sticky;
+  top: 0;
   width: 418px;
-  border: 1px solid #d30c0c;
+
   &__container {
     // @extend %container;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
   }
   &__img {
-    // height: 396px;
     img {
       object-fit: cover;
+      height: 396px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    overflow-y: scroll;
+    gap: 24px;
+    &-bio {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    &-links {
+      display: flex;
+      gap: 36px;
+      img {
+        width: auto;
+      }
     }
   }
 }

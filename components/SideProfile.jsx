@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { BsTelephone } from "react-icons/bs";
+import { MdAlternateEmail } from "react-icons/md";
 
 function SideProfile() {
   return (
@@ -17,7 +19,50 @@ function SideProfile() {
           />
         </div>
         <div className="side-profile__info">
-          <p>info</p>
+          <div className="side-profile__info-name">
+            <h1>Ferdy. 🐳</h1>
+          </div>
+          <div className="side-profile__info-bio">
+            <p> Hello, my name is Berlianto, I was born on June 12, 1996.</p>
+            {/* <br /> */}
+            <p>
+              In this website you will my journey exploring digital technology
+              in 2023.
+            </p>
+            {/* <br /> */}
+            <p>
+              My primary goal is to create something beautiful with cool people.
+            </p>
+          </div>
+          <div className="side-profile__info-phone">
+            <p
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              <BsTelephone /> +123456789
+            </p>
+          </div>
+          <div className="side-profile__info-email">
+            <p
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+              }}
+            >
+              <MdAlternateEmail /> berlianto.ferdynan@gmail.com
+            </p>
+          </div>
+          <div className="side-profile__info-links">
+            <Image src="/assets/linkedin-logo2.png" width={24} height={24} />
+            <Image src="/assets/bloger-logo.png" width={24} height={24} />
+            <Image src="/assets/medium-logo.png" width={24} height={24} />
+            <Image src="/assets/fem-logo.png" width={24} height={24} />
+            <Image src="/assets/github-logo.png" width={24} height={24} />
+          </div>
         </div>
       </div>
     </section>

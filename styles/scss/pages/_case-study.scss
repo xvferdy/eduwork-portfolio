@@ -7,8 +7,10 @@
 
   /* BANNER */
   .banner {
-    // @extend %section;
+    @extend %section;
     height: 80vh;
+    // position: sticky;
+    // top: 100px;
     &__container {
       // @extend %container;
       display: flex;

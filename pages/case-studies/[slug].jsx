@@ -7,6 +7,7 @@ import Image from "next/image";
 import Chip from "@/components/Chip";
 import { TfiLayoutMenuSeparated } from "react-icons/fi";
 import { BiAbacus } from "react-icons/bi";
+import { AiFillHome } from "react-icons/ai";
 import Divider from "@/components/Divider";
 import Link from "next/link";
 
@@ -138,15 +139,15 @@ function CaseStudy({ caseStudy }) {
                     </p>
                   ))}
                 </div>
-                <div className="intro__role">
-                  <h3>Role</h3>
-                  <ReactMarkdown>{role}</ReactMarkdown>
-                </div>
-              </div>
-              <div className="right">
                 <div className="intro__duration">
                   <h3>Project Duration</h3>
                   <ReactMarkdown>{projectDuration}</ReactMarkdown>
+                </div>
+              </div>
+              <div className="right">
+                <div className="intro__role">
+                  <h3>Role</h3>
+                  <ReactMarkdown>{role}</ReactMarkdown>
                 </div>
                 <div className="intro__type">
                   <h3>Project Type</h3>
@@ -247,10 +248,14 @@ function CaseStudy({ caseStudy }) {
         <div className="container">
           <p>
             Thank you for reading! I'd love to hear of any feedback from you for
-            this article. Say hi to me at berlianto.ferdynand@gmail.com
+            this article. Say hi to me at{" "}
+            <a className="email" href="mailto:xv.ferdy@gmail.com">
+              xv.ferdy@gmail.com
+            </a>
           </p>
           <Link className="btn btn--primary" href={`/`}>
             Back to Homepage
+            <AiFillHome />
           </Link>
         </div>
       </footer>

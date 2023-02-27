@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Button from "./Button";
 import Image from "next/image";
 import Chip from "@/components/Chip";
 import { FaLocationArrow } from "react-icons/fa";

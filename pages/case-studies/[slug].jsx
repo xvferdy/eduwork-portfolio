@@ -1,16 +1,14 @@
 import React from "react";
-import { createClient } from "contentful";
-import ReactMarkdown from "react-markdown";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
-import Chip from "@/components/Chip";
-import { TfiLayoutMenuSeparated } from "react-icons/fi";
-import { BiAbacus } from "react-icons/bi";
-import { AiFillHome } from "react-icons/ai";
-import Divider from "@/components/Divider";
 import Link from "next/link";
 import Head from "next/head";
+import Chip from "@/components/Chip";
+import Divider from "@/components/Divider";
+import { createClient } from "contentful";
+import { BLOCKS } from "@contentful/rich-text-types";
+import ReactMarkdown from "react-markdown";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { AiFillHome } from "react-icons/ai";
 
 // const contentfulLoader = ({ src }) => {
 //   return src;

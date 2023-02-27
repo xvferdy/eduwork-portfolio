@@ -25,24 +25,12 @@ function SideProfile() {
           </div>
           <div className="side-profile__info-bio">
             <p> Hello, my name is Berlianto, I was born on June 12, 1996.</p>
-            {/* <br /> */}
+
             <p>
               In this website you will find my journey exploring digital
               technology in 2023.
             </p>
-            {/* <p>
-              In this website you will my journey exploring digital technology
-              in 2023.
-            </p>
-            <p>
-              In this website you will my journey exploring digital technology
-              in 2023.
-            </p>
-            <p>
-              In this website you will my journey exploring digital technology
-              in 2023.
-            </p> */}
-            {/* <br /> */}
+
             <p>So grateful to be sharing my world with you.</p>
           </div>
           <div className="side-profile__info-phone">

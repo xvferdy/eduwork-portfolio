@@ -10,7 +10,7 @@ function SideProfile() {
       <div className="container side-profile__container">
         <div className="side-profile__img">
           <Image
-            src="/assets/pp00.png"
+            src="/Assets/pp00.png"
             // fill
             // width={1199}
             // height={615}
@@ -45,25 +45,25 @@ function SideProfile() {
           </div>
           <div className="side-profile__info-links">
             <Link href="https://www.google.com/" title="Linkedin">
-              <Image src="/assets/linkedin-logo2.png" width={24} height={24} />
+              <Image src="/Assets/linkedin-logo2.png" width={24} height={24} />
             </Link>
             <Link
               href="https://www.blogger.com/profile/16732934081090438699"
               title="Blogspot"
             >
-              <Image src="/assets/bloger-logo.png" width={24} height={24} />
+              <Image src="/Assets/bloger-logo.png" width={24} height={24} />
             </Link>
             <Link href="https://medium.com/@berlianto.dev" title="Medium">
-              <Image src="/assets/medium-logo.png" width={24} height={24} />
+              <Image src="/Assets/medium-logo.png" width={24} height={24} />
             </Link>
             <Link
               href="https://www.frontendmentor.io/profile/xvferdy"
               title="Frontend Mentor"
             >
-              <Image src="/assets/fem-logo.png" width={24} height={24} />
+              <Image src="/Assets/fem-logo.png" width={24} height={24} />
             </Link>
             <Link href="https://github.com/xvferdy" title="Github">
-              <Image src="/assets/github-logo.png" width={24} height={24} />
+              <Image src="/Assets/github-logo.png" width={24} height={24} />
             </Link>
           </div>
         </div>

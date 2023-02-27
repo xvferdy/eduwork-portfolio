@@ -60,6 +60,7 @@
     &__container {
       @extend %container;
       display: grid;
+      gap: 16px;
     }
     &__chips {
       display: flex;
@@ -205,6 +206,15 @@
       p {
         // border: 1px solid #000;
         margin-top: 16px;
+      }
+    }
+  }
+
+  // MEDIA-QUERIES
+  @include display(sm-phone) {
+    .intro {
+      .bottom {
+        grid-template-columns: 1fr;
       }
     }
   }

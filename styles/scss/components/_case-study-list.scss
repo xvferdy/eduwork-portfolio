@@ -1,11 +1,23 @@
+@use "../abstracts/" as *;
+
 .case-study-list {
-  flex-grow: 1;
-  // flex-basis: 75%;
+  // flex-grow: 1;
+  flex-basis: 75%;
   // border: 1px solid #000;
 
   &__container {
     display: flex;
     flex-direction: column;
     gap: 36px;
+  }
+
+  // MEDIA-QUERIES
+  @include display(tab-land) {
+    // padding: 60px 24px;
+  }
+  @include display(tab-port) {
+    // flex-basis: 100%;
+  }
+  @include display(lg-phone) {
   }
 }

@@ -28,4 +28,10 @@
     background: $color-primary-green-50;
     // color: black;
   }
+
+  // MEDIA-QUERIES
+  @include display(lg-phone) {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
 }

@@ -29,31 +29,31 @@ function SideProfile() {
               In this website you will my journey exploring digital technology
               in 2023.
             </p>
+            {/* <p>
+              In this website you will my journey exploring digital technology
+              in 2023.
+            </p>
+            <p>
+              In this website you will my journey exploring digital technology
+              in 2023.
+            </p>
+            <p>
+              In this website you will my journey exploring digital technology
+              in 2023.
+            </p> */}
             {/* <br /> */}
             <p>
               My primary goal is to create something beautiful with cool people.
             </p>
           </div>
           <div className="side-profile__info-phone">
-            <p
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
+            <p>
               <BsTelephone /> +123456789
             </p>
           </div>
           <div className="side-profile__info-email">
-            <p
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
-              <MdAlternateEmail /> berlianto.ferdynan@gmail.com
+            <p>
+              <MdAlternateEmail /> xv.ferdy@gmail.com
             </p>
           </div>
           <div className="side-profile__info-links">

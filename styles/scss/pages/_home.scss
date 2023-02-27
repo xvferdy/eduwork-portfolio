@@ -1,5 +1,20 @@
+@use "../abstracts/" as *;
+
 .homepage-main {
   display: flex;
   gap: 24px;
   padding: 60px 96px;
+  // border: 1px solid #ca4eaf;
+
+  // MEDIA-QUERIES
+  @include display(tab-land) {
+    padding: 60px 24px;
+  }
+  @include display(tab-port) {
+    flex-direction: column;
+  }
+  @include display(lg-phone) {
+    padding: 60px 16px;
+    gap: 40px;
+  }
 }

@@ -5,6 +5,13 @@
   display: grid;
   gap: 80px;
 
+  b,
+  strong {
+    // background-color: $color-primary-green-50;
+    // color: $color-neutral-80;
+    font-weight: bold;
+  }
+
   /* BANNER */
   .banner {
     @extend %section;
@@ -17,6 +24,10 @@
       justify-content: center;
       // align-items: center;
       position: relative;
+
+      //?
+      width: 100%;
+      height: 100%;
     }
     &__bg {
       position: absolute;
@@ -164,10 +175,7 @@
         display: flex;
         justify-content: center;
       }
-      b {
-        // background-color: $color-primary-green-50;
-        // color: $color-neutral-80;
-      }
+
       a {
         font-size: 16px;
         line-height: auto;

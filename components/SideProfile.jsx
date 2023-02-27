@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { BsTelephone } from "react-icons/bs";
 import { MdAlternateEmail } from "react-icons/md";
+import Link from "next/link";
 
 function SideProfile() {
   return (
@@ -26,8 +27,8 @@ function SideProfile() {
             <p> Hello, my name is Berlianto, I was born on June 12, 1996.</p>
             {/* <br /> */}
             <p>
-              In this website you will my journey exploring digital technology
-              in 2023.
+              In this website you will find my journey exploring digital
+              technology in 2023.
             </p>
             {/* <p>
               In this website you will my journey exploring digital technology
@@ -42,9 +43,7 @@ function SideProfile() {
               in 2023.
             </p> */}
             {/* <br /> */}
-            <p>
-              My primary goal is to create something beautiful with cool people.
-            </p>
+            <p>So grateful to be sharing my world with you.</p>
           </div>
           <div className="side-profile__info-phone">
             <p>
@@ -57,11 +56,27 @@ function SideProfile() {
             </p>
           </div>
           <div className="side-profile__info-links">
-            <Image src="/assets/linkedin-logo2.png" width={24} height={24} />
-            <Image src="/assets/bloger-logo.png" width={24} height={24} />
-            <Image src="/assets/medium-logo.png" width={24} height={24} />
-            <Image src="/assets/fem-logo.png" width={24} height={24} />
-            <Image src="/assets/github-logo.png" width={24} height={24} />
+            <Link href="https://www.google.com/" title="Linkedin">
+              <Image src="/assets/linkedin-logo2.png" width={24} height={24} />
+            </Link>
+            <Link
+              href="https://www.blogger.com/profile/16732934081090438699"
+              title="Blogspot"
+            >
+              <Image src="/assets/bloger-logo.png" width={24} height={24} />
+            </Link>
+            <Link href="https://medium.com/@berlianto.dev" title="Medium">
+              <Image src="/assets/medium-logo.png" width={24} height={24} />
+            </Link>
+            <Link
+              href="https://www.frontendmentor.io/profile/xvferdy"
+              title="Frontend Mentor"
+            >
+              <Image src="/assets/fem-logo.png" width={24} height={24} />
+            </Link>
+            <Link href="https://github.com/xvferdy" title="Github">
+              <Image src="/assets/github-logo.png" width={24} height={24} />
+            </Link>
           </div>
         </div>
       </div>

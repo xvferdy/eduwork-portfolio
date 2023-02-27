@@ -10,6 +10,7 @@ import { BiAbacus } from "react-icons/bi";
 import { AiFillHome } from "react-icons/ai";
 import Divider from "@/components/Divider";
 import Link from "next/link";
+import Head from "next/head";
 
 // const contentfulLoader = ({ src }) => {
 //   return src;
@@ -59,6 +60,12 @@ function CaseStudy({ caseStudy }) {
 
   return (
     <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content="Case Study Article" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon01.ico" />
+      </Head>
       <main className="case-study-main">
         {/* BANNER */}
         <section

@@ -57,7 +57,7 @@
     }
     &__mockup {
       max-height: 80vh;
-      padding: 24px 0;
+      padding: 24px 16px;
       img {
         object-fit: contain;
         height: 100%;
@@ -148,7 +148,8 @@
       }
       h5 {
         margin-bottom: 4px;
-        margin-top: 40px;
+        // margin-top: 40px;
+        margin-top: 80px;
         color: $color-primary-green-50;
         font-weight: 800;
       }

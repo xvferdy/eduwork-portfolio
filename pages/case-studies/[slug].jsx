@@ -127,7 +127,8 @@ function CaseStudy({ caseStudy }) {
             <h2>Introduction</h2>
             <div className="intro__brief">
               <h3>Project Brief</h3>
-              <ReactMarkdown>{projectBrief}</ReactMarkdown>
+              {documentToReactComponents(projectBrief, options)}
+              {/* <ReactMarkdown>{projectBrief}</ReactMarkdown> */}
             </div>
             <div className="intro__goals">
               <h3>Project Goals</h3>

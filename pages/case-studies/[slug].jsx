@@ -262,7 +262,7 @@ function CaseStudy({ caseStudy }) {
               xv.ferdy@gmail.com
             </a>
           </p>
-          <Link className="btn btn--primary" href={`/`}>
+          <Link className="btn btn--primary" href={`/`} scroll={false}>
             Back to Homepage
             <AiFillHome />
           </Link>

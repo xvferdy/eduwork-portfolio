@@ -50,7 +50,11 @@ function CaseStudyCard({ caseStudy }) {
             <ReactMarkdown>{thumbBrief}</ReactMarkdown>
           </div>
 
-          <Link className="btn btn--primary" href={`/case-studies/${slug}`}>
+          <Link
+            className="btn btn--primary"
+            href={`/case-studies/${slug}`}
+            scroll={false}
+          >
             View Project <FaLocationArrow />
           </Link>
         </div>

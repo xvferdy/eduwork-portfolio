@@ -91,6 +91,7 @@ function CaseStudy({ caseStudy }) {
                 width={969}
                 height={497}
                 priority
+                alt={projectBanner.fields.file.fileName}
               />
             </div>
 
@@ -104,6 +105,7 @@ function CaseStudy({ caseStudy }) {
                 // alt="food"
                 // placeholder="blur"
                 // blurDataURL={menuItem.img}
+                alt={projectMockup.fields.file.fileName}
               />
             </div>
           </div>
@@ -177,6 +179,7 @@ function CaseStudy({ caseStudy }) {
                 // alt="food"
                 // placeholder="blur"
                 // blurDataURL={menuItem.img}
+                alt={projectWorkflow.fields.file.fileName}
               />
             </div>
           </div>

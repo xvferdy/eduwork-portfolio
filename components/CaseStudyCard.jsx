@@ -33,6 +33,7 @@ function CaseStudyCard({ caseStudy }) {
             // width={1199}
             // height={615}
             priority
+            alt="Banner BG"
           />
         </div>
 
@@ -45,9 +46,9 @@ function CaseStudyCard({ caseStudy }) {
           </div>
           <h2 className="card__title">{title}</h2>
           {/* <p className="card__brief">{thumbBrief}</p> */}
-          <p className="card__brief">
+          <div className="card__brief">
             <ReactMarkdown>{thumbBrief}</ReactMarkdown>
-          </p>
+          </div>
 
           <Link className="btn btn--primary" href={`/case-studies/${slug}`}>
             View Project <FaLocationArrow />
@@ -62,7 +63,7 @@ function CaseStudyCard({ caseStudy }) {
             width={285}
             // priority
             // fill
-            // alt="food"
+            alt="Preview"
             // placeholder="blur"
             // blurDataURL={menuItem.img}
           />

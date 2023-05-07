@@ -17,6 +17,7 @@ function SideProfile() {
             // height={615}
             width={969}
             height={497}
+            alt="Profile Pict"
             // priority
           />
         </div>
@@ -46,25 +47,50 @@ function SideProfile() {
           </div>
           <div className="side-profile__info-links">
             <Link href="https://www.google.com/" title="Linkedin">
-              <Image src="/Assets/linkedin-logo2.png" width={24} height={24} />
+              <Image
+                src="/Assets/linkedin-logo2.png"
+                width={24}
+                height={24}
+                alt="Linkedin"
+              />
             </Link>
             <Link
               href="https://www.blogger.com/profile/16732934081090438699"
               title="Blogspot"
             >
-              <Image src="/Assets/bloger-logo.png" width={24} height={24} />
+              <Image
+                src="/Assets/bloger-logo.png"
+                width={24}
+                height={24}
+                alt="Blogspot"
+              />
             </Link>
             <Link href="https://medium.com/@berlianto.dev" title="Medium">
-              <Image src="/Assets/medium-logo.png" width={24} height={24} />
+              <Image
+                src="/Assets/medium-logo.png"
+                width={24}
+                height={24}
+                alt="Medium"
+              />
             </Link>
             <Link
               href="https://www.frontendmentor.io/profile/xvferdy"
               title="Frontend Mentor"
             >
-              <Image src="/Assets/fem-logo.png" width={24} height={24} />
+              <Image
+                src="/Assets/fem-logo.png"
+                width={24}
+                height={24}
+                alt="Frontend Mentor"
+              />
             </Link>
             <Link href="https://github.com/xvferdy" title="Github">
-              <Image src="/Assets/github-logo.png" width={24} height={24} />
+              <Image
+                src="/Assets/github-logo.png"
+                width={24}
+                height={24}
+                alt="Github"
+              />
             </Link>
           </div>
         </div>

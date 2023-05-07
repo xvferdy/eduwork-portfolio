@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Chip from "@/components/Chip";
 import { FaLocationArrow } from "react-icons/fa";
+import ReactMarkdown from "react-markdown";
 
 function CaseStudyCard({ caseStudy }) {
   const {
@@ -43,7 +44,11 @@ function CaseStudyCard({ caseStudy }) {
             ))}
           </div>
           <h2 className="card__title">{title}</h2>
-          <p className="card__brief">{thumbBrief}</p>
+          {/* <p className="card__brief">{thumbBrief}</p> */}
+          <p className="card__brief">
+            <ReactMarkdown>{thumbBrief}</ReactMarkdown>
+          </p>
+
           <Link className="btn btn--primary" href={`/case-studies/${slug}`}>
             View Project <FaLocationArrow />
           </Link>

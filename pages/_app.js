@@ -1,6 +1,6 @@
 import "@/styles/scss/main.scss";
 
-import { Raleway } from "@next/font/google";
+import { Raleway, Inter } from "@next/font/google";
 
 const raleway = Raleway({
   weight: ["300", "400", "500", "600", "700", "800", "900"],

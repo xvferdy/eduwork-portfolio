@@ -5,6 +5,7 @@ import CaseStudyList from "@/components/CaseStudyList";
 import { createClient } from "contentful";
 
 export default function Home({ caseStudies }) {
+  // console.log(caseStudies);
   return (
     <>
       <Head>
@@ -29,7 +30,6 @@ export async function getStaticProps(ctx) {
 
   const res = await client.getEntries({ content_type: "caseStudyEduwork" });
   const data = res.items;
-
   return {
     props: {
       caseStudies: data,

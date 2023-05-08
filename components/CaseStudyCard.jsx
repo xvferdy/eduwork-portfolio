@@ -15,7 +15,7 @@ function CaseStudyCard({ caseStudy }) {
     slug,
     thumbBrief,
     projectWorkflow,
-  } = caseStudy.fields;
+  } = caseStudy;
 
   // const { img } = caseStudy.fields.projectMockup.fields.file.url;
 

@@ -10,6 +10,7 @@ import ReactMarkdown from "react-markdown";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { AiFillHome } from "react-icons/ai";
 import { motion, useScroll, useSpring } from "framer-motion";
+import Nav from "@/components/Nav";
 
 // const contentfulLoader = ({ src }) => {
 //   return src;
@@ -68,11 +69,15 @@ function CaseStudy({ caseStudy }) {
         <link rel="icon" href="/favicon01.ico" />
       </Head>
       <main className="case-study-main">
+        {/* Scroll progress */}
         <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
         />
-        {/* <div className="test">halo</div> */}
+
+        {/* Nav */}
+        <Nav />
+
         {/* BANNER */}
         <section
           className="banner"
@@ -191,12 +196,13 @@ function CaseStudy({ caseStudy }) {
               />
             </div>
           </div>
+          <div id="empathize" />
         </section>
 
         <Divider />
 
         {/* EMPATHY */}
-        <section className="empathize">
+        <section id="empathize" className="empathize">
           <div className="container empathize__container">
             <motion.div
               className="phase"
@@ -213,10 +219,11 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(empathizeContent, options)}
           </div>
+          <div id="define" />
         </section>
 
         {/* DEFINE */}
-        <section className="define">
+        <section id="define" className="define">
           <div className="container define__container">
             <motion.div
               className="phase"
@@ -233,10 +240,11 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(defineContent, options)}
           </div>
+          <div id="ideate" />
         </section>
 
         {/* IDEATE */}
-        <section className="ideate">
+        <section id="ideate" className="ideate">
           <div className="container ideate__container">
             <motion.div
               className="phase"
@@ -253,10 +261,11 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(ideateContent, options)}
           </div>
+          <div id="prototype" />
         </section>
 
         {/* PROTOTYPE */}
-        <section className="prototype">
+        <section id="prototype" className="prototype">
           <div className="container prototype__container">
             <motion.div
               className="phase"
@@ -273,6 +282,7 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(prototypeContent, options)}
           </div>
+          <div id="test" />
         </section>
 
         {/* TEST */}

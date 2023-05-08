@@ -3,7 +3,7 @@
 nav {
   position: fixed;
   height: 350px;
-  left: 20px;
+  right: 20px;
   // bottom: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -28,6 +28,7 @@ nav {
         color: #1a2238;
         display: flex;
         align-items: center;
+        justify-content: end;
         cursor: pointer;
         width: 100%;
         transition: 0.2s all ease;
@@ -35,6 +36,7 @@ nav {
         svg {
           width: 30px;
           height: 30px;
+
           path {
             transition: 0.2s all ease;
           }
@@ -46,7 +48,8 @@ nav {
           line-height: 24px;
 
           border-radius: 30px;
-          margin-left: 10px;
+
+          margin-right: 10px;
           font-weight: 500;
           font-size: 15px;
           visibility: hidden;
@@ -55,16 +58,16 @@ nav {
           transition: 0.2s all ease;
         }
         &--active {
-          background-color: rgb(220, 223, 10);
-          color: greenyellow;
-          filter: drop-shadow(0 0 5px yellow);
+          // background-color: rgb(220, 223, 10);
+          // color: greenyellow;
+          // filter: drop-shadow(0 0 5px yellow);
         }
         &:hover {
           background-color: red;
           span {
             opacity: 1;
             visibility: visible;
-            margin-left: 50px;
+            margin-right: 50px;
           }
         }
       }
@@ -72,7 +75,7 @@ nav {
   }
 
   // MEDIA-QUERIES
-  @include display(phone) {
+  @include display(tab-port) {
     height: max-content;
     width: 300px;
     top: 90%;
@@ -89,7 +92,7 @@ nav {
             // position: relative;
             margin-bottom: 50px;
             // margin-left: 50%;
-            margin-left: 0;
+            margin-right: 0;
             left: 50%;
 
             transform: translateX(-50%);
@@ -112,7 +115,7 @@ nav {
           &:hover {
             span {
               // top: -90px;
-              margin-left: 0;
+              margin-right: 0;
               margin-bottom: 100px;
             }
             &--active {

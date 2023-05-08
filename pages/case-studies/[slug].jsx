@@ -60,6 +60,7 @@ function CaseStudy({ caseStudy }) {
   } = caseStudy.fields;
 
   const { scrollYProgress } = useScroll();
+  const { ref: introRef, inView: introActive } = useInView();
   const { ref: empathizeRef, inView: empathizeActive } = useInView();
   const { ref: defineRef, inView: defineActive } = useInView();
   const { ref: ideateRef, inView: ideateActive } = useInView();
@@ -82,6 +83,7 @@ function CaseStudy({ caseStudy }) {
 
         {/* Nav */}
         <Nav
+          introActive={introActive}
           empathizeActive={empathizeActive}
           defineActive={defineActive}
           ideateActive={ideateActive}
@@ -148,7 +150,7 @@ function CaseStudy({ caseStudy }) {
         </section>
 
         {/* INTRO */}
-        <section className="intro">
+        <section id="intro" ref={introRef} className="intro">
           <div className="container intro__container">
             <h2>Introduction</h2>
             <div className="intro__brief">
@@ -207,13 +209,13 @@ function CaseStudy({ caseStudy }) {
               />
             </div>
           </div>
-          <div ref={empathizeRef} id="empathize" />
+          <div ref={empathizeRef} id="empathize" style={{ height: "1px" }} />
         </section>
 
         <Divider />
 
         {/* EMPATHY */}
-        <section id="empathize" className="empathize">
+        <section className="empathize">
           <div className="container empathize__container">
             <motion.div
               className="phase"
@@ -230,7 +232,7 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(empathizeContent, options)}
           </div>
-          <div ref={defineRef} id="define" />
+          <div ref={defineRef} id="define" style={{ height: "1px" }} />
         </section>
 
         {/* DEFINE */}
@@ -251,11 +253,11 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(defineContent, options)}
           </div>
-          <div ref={ideateRef} id="ideate" />
+          <div ref={ideateRef} id="ideate" style={{ height: "1px" }} />
         </section>
 
         {/* IDEATE */}
-        <section id="ideate" className="ideate">
+        <section className="ideate">
           <div className="container ideate__container">
             <motion.div
               className="phase"
@@ -272,11 +274,11 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(ideateContent, options)}
           </div>
-          <div ref={prototypeRef} id="prototype" />
+          <div ref={prototypeRef} id="prototype" style={{ height: "1px" }} />
         </section>
 
         {/* PROTOTYPE */}
-        <section id="prototype" className="prototype">
+        <section className="prototype">
           <div className="container prototype__container">
             <motion.div
               className="phase"
@@ -293,7 +295,7 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(prototypeContent, options)}
           </div>
-          <div ref={testRef} id="test" />
+          <div ref={testRef} id="test" style={{ height: "1px" }} />
         </section>
 
         {/* TEST */}

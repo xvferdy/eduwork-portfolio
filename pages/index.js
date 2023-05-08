@@ -3,7 +3,7 @@ import Image from "next/image";
 import SideProfile from "@/components/SideProfile";
 import CaseStudyList from "@/components/CaseStudyList";
 import { createClient } from "contentful";
-
+import Box from "@/components/Box";
 export default function Home({ caseStudies }) {
   return (
     <>

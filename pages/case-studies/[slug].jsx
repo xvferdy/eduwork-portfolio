@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
@@ -11,6 +11,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { AiFillHome } from "react-icons/ai";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Nav from "@/components/Nav";
+import { useInView } from "react-intersection-observer";
 
 // const contentfulLoader = ({ src }) => {
 //   return src;
@@ -59,7 +60,11 @@ function CaseStudy({ caseStudy }) {
   } = caseStudy.fields;
 
   const { scrollYProgress } = useScroll();
-
+  const { ref: empathizeRef, inView: empathizeActive } = useInView();
+  const { ref: defineRef, inView: defineActive } = useInView();
+  const { ref: ideateRef, inView: ideateActive } = useInView();
+  const { ref: prototypeRef, inView: prototypeActive } = useInView();
+  const { ref: testRef, inView: testActive } = useInView();
   return (
     <>
       <Head>
@@ -76,7 +81,13 @@ function CaseStudy({ caseStudy }) {
         />
 
         {/* Nav */}
-        <Nav />
+        <Nav
+          empathizeActive={empathizeActive}
+          defineActive={defineActive}
+          ideateActive={ideateActive}
+          prototypeActive={prototypeActive}
+          testActive={testActive}
+        />
 
         {/* BANNER */}
         <section
@@ -196,7 +207,7 @@ function CaseStudy({ caseStudy }) {
               />
             </div>
           </div>
-          <div id="empathize" />
+          <div ref={empathizeRef} id="empathize" />
         </section>
 
         <Divider />
@@ -219,7 +230,7 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(empathizeContent, options)}
           </div>
-          <div id="define" />
+          <div ref={defineRef} id="define" />
         </section>
 
         {/* DEFINE */}
@@ -240,7 +251,7 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(defineContent, options)}
           </div>
-          <div id="ideate" />
+          <div ref={ideateRef} id="ideate" />
         </section>
 
         {/* IDEATE */}
@@ -261,7 +272,7 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(ideateContent, options)}
           </div>
-          <div id="prototype" />
+          <div ref={prototypeRef} id="prototype" />
         </section>
 
         {/* PROTOTYPE */}
@@ -282,7 +293,7 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(prototypeContent, options)}
           </div>
-          <div id="test" />
+          <div ref={testRef} id="test" />
         </section>
 
         {/* TEST */}

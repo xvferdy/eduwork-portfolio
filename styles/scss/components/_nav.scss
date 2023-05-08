@@ -4,8 +4,9 @@ nav {
   position: fixed;
   height: 350px;
   left: 20px;
-  top: 0;
-  bottom: 0;
+  // bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   margin: auto 0;
   background-color: #fefefe;
   padding: 20px 10px;
@@ -20,7 +21,9 @@ nav {
     height: 100%;
     li {
       width: 100%;
-      a {
+
+      .menu {
+        position: relative;
         text-decoration: none;
         color: #1a2238;
         display: flex;
@@ -28,6 +31,7 @@ nav {
         cursor: pointer;
         width: 100%;
         transition: 0.2s all ease;
+
         svg {
           width: 30px;
           height: 30px;
@@ -39,6 +43,8 @@ nav {
           position: absolute;
           background-color: #fefefe;
           padding: 2px 15px;
+          line-height: 24px;
+
           border-radius: 30px;
           margin-left: 10px;
           font-weight: 500;
@@ -48,9 +54,13 @@ nav {
           color: #1a2238;
           transition: 0.2s all ease;
         }
-
+        &--active {
+          background-color: rgb(220, 223, 10);
+          color: greenyellow;
+          filter: drop-shadow(0 0 5px yellow);
+        }
         &:hover {
-          color: #32c52d;
+          background-color: red;
           span {
             opacity: 1;
             visibility: visible;
@@ -60,7 +70,65 @@ nav {
       }
     }
   }
+
+  // MEDIA-QUERIES
+  @include display(phone) {
+    height: max-content;
+    width: 300px;
+    top: 90%;
+    left: 50%;
+    padding: 10px 20px;
+    transform: translateX(-50%);
+    ul {
+      flex-flow: row;
+
+      li {
+        .menu {
+          justify-content: center;
+          span {
+            // position: relative;
+            margin-bottom: 50px;
+            // margin-left: 50%;
+            margin-left: 0;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            // top: -90px;
+            // left: 50%;
+
+            // margin-bottom: 50px;
+          }
+          &--active {
+            background-color: rgb(10, 77, 223);
+            // color: greenyellow;
+            // filter: drop-shadow(0 0 5px yellow);
+            span {
+              // left: 10px;
+              // margin-left: 50%;
+            }
+          }
+
+          &:hover {
+            span {
+              // top: -90px;
+              margin-left: 0;
+              margin-bottom: 100px;
+            }
+            &--active {
+              background-color: rgb(10, 77, 223);
+              // color: greenyellow;
+              // filter: drop-shadow(0 0 5px yellow);
+              span {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 // .nav {
 //   background-color: rgba(0, 0, 0, 0.3);
 //   width: max-content;

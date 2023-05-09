@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
@@ -9,6 +9,9 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import ReactMarkdown from "react-markdown";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { AiFillHome } from "react-icons/ai";
+import { motion, useScroll, useSpring } from "framer-motion";
+import Nav from "@/components/Nav";
+import { useInView } from "react-intersection-observer";
 
 // const contentfulLoader = ({ src }) => {
 //   return src;
@@ -56,15 +59,38 @@ function CaseStudy({ caseStudy }) {
     learnings,
   } = caseStudy.fields;
 
+  const { scrollYProgress } = useScroll();
+  const { ref: introRef, inView: introActive } = useInView();
+  const { ref: empathizeRef, inView: empathizeActive } = useInView();
+  const { ref: defineRef, inView: defineActive } = useInView();
+  const { ref: ideateRef, inView: ideateActive } = useInView();
+  const { ref: prototypeRef, inView: prototypeActive } = useInView();
+  const { ref: testRef, inView: testActive } = useInView();
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content="Case Study Article" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon01.ico" />
+        <link rel="icon" href="/book.png" />
       </Head>
       <main className="case-study-main">
+        {/* Scroll progress */}
+        <motion.div
+          className="progress-bar"
+          style={{ scaleX: scrollYProgress }}
+        />
+
+        {/* Nav */}
+        <Nav
+          introActive={introActive}
+          empathizeActive={empathizeActive}
+          defineActive={defineActive}
+          ideateActive={ideateActive}
+          prototypeActive={prototypeActive}
+          testActive={testActive}
+        />
+
         {/* BANNER */}
         <section
           className="banner"
@@ -91,6 +117,7 @@ function CaseStudy({ caseStudy }) {
                 width={969}
                 height={497}
                 priority
+                alt={projectBanner.fields.file.fileName}
               />
             </div>
 
@@ -104,6 +131,7 @@ function CaseStudy({ caseStudy }) {
                 // alt="food"
                 // placeholder="blur"
                 // blurDataURL={menuItem.img}
+                alt={projectMockup.fields.file.fileName}
               />
             </div>
           </div>
@@ -122,7 +150,7 @@ function CaseStudy({ caseStudy }) {
         </section>
 
         {/* INTRO */}
-        <section className="intro">
+        <section id="intro" ref={introRef} className="intro">
           <div className="container intro__container">
             <h2>Introduction</h2>
             <div className="intro__brief">
@@ -177,9 +205,11 @@ function CaseStudy({ caseStudy }) {
                 // alt="food"
                 // placeholder="blur"
                 // blurDataURL={menuItem.img}
+                alt={projectWorkflow.fields.file.fileName}
               />
             </div>
           </div>
+          <div ref={empathizeRef} id="empathize" style={{ height: "1px" }} />
         </section>
 
         <Divider />
@@ -187,39 +217,103 @@ function CaseStudy({ caseStudy }) {
         {/* EMPATHY */}
         <section className="empathize">
           <div className="container empathize__container">
-            <div className="phase">Understand The Problem</div>
+            <motion.div
+              className="phase"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                rotate: -1,
+              }}
+              transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Understand The Problem
+            </motion.div>
             {documentToReactComponents(empathizeContent, options)}
           </div>
+          <div ref={defineRef} id="define" style={{ height: "1px" }} />
         </section>
 
         {/* DEFINE */}
-        <section className="define">
+        <section id="define" className="define">
           <div className="container define__container">
-            <div className="phase">Defining The Problem</div>
+            <motion.div
+              className="phase"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                rotate: -1,
+              }}
+              transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Defining The Problem
+            </motion.div>
             {documentToReactComponents(defineContent, options)}
           </div>
+          <div ref={ideateRef} id="ideate" style={{ height: "1px" }} />
         </section>
 
         {/* IDEATE */}
         <section className="ideate">
           <div className="container ideate__container">
-            <div className="phase">Ideation</div>
+            <motion.div
+              className="phase"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                rotate: -1,
+              }}
+              transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Ideation
+            </motion.div>
             {documentToReactComponents(ideateContent, options)}
           </div>
+          <div ref={prototypeRef} id="prototype" style={{ height: "1px" }} />
         </section>
 
         {/* PROTOTYPE */}
         <section className="prototype">
           <div className="container prototype__container">
-            <div className="phase">Design</div>
+            <motion.div
+              className="phase"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                rotate: -1,
+              }}
+              transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Design
+            </motion.div>
             {documentToReactComponents(prototypeContent, options)}
           </div>
+          <div ref={testRef} id="test" style={{ height: "1px" }} />
         </section>
 
         {/* TEST */}
         <section className="test">
           <div className="container test__container">
-            <div className="phase">Test</div>
+            <motion.div
+              className="phase"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                rotate: -1,
+              }}
+              transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Test
+            </motion.div>
             {documentToReactComponents(testContent, options)}
           </div>
         </section>
@@ -259,7 +353,7 @@ function CaseStudy({ caseStudy }) {
               xv.ferdy@gmail.com
             </a>
           </p>
-          <Link className="btn btn--primary" href={`/`}>
+          <Link className="btn btn--primary" href={`/`} scroll={false}>
             Back to Homepage
             <AiFillHome />
           </Link>

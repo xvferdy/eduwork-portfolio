@@ -10,7 +10,6 @@ export default function Home({ caseStudies }) {
         <title>Ferdy UI/UX</title>
         <meta name="description" content="List of Case Study" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href="/favicon00.ico" /> */}
         <link rel="icon" href="/globe2.png" />
       </Head>
       <main className="homepage-main">

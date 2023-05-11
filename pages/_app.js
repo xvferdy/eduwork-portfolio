@@ -1,7 +1,7 @@
 import "@/styles/scss/main.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import { Raleway, Inter } from "@next/font/google";
+import { Raleway } from "@next/font/google";
 import { useEffect } from "react";
 
 const raleway = Raleway({

@@ -6,9 +6,6 @@
   align-self: flex-start;
   position: sticky;
   top: 0;
-  // max-width: 418px;
-  // border: 1px solid #d12f2f;
-
   &__container {
     display: flex;
     flex-direction: column;
@@ -30,7 +27,6 @@
     height: 350px;
     overflow-y: scroll;
     gap: 24px;
-    // padding: 36px 0;
     padding-bottom: 72px;
     padding-right: 8px;
 
@@ -42,7 +38,6 @@
     &-phone {
       p {
         display: flex;
-        // flex-wrap: wrap;
         align-items: center;
         gap: 4px;
       }
@@ -50,15 +45,12 @@
     &-email {
       p {
         display: flex;
-        // flex-wrap: wrap;
         align-items: center;
         gap: 4px;
       }
     }
     &-links {
       display: flex;
-      // justify-content: space-between;
-      // flex-wrap: wrap;
       gap: 24px;
       img {
         width: auto;
@@ -90,32 +82,26 @@
 
   // MEDIA-QUERIES
   @include display(tab-land) {
-    // width: 276px;
   }
   @include display(tab-port) {
-    // flex-basis: 100%;
-    // width: 100%;
-
     position: static;
     align-self: stretch;
     &__container {
       flex-direction: row;
-      // border: 1px solid #b85858;
+
       gap: 36px;
     }
     &__img {
       flex-basis: 30%;
-      // border: 1px solid #d1c6c6;
 
       img {
         object-fit: cover;
         height: 100%;
-        // width: 100%;
       }
     }
     &__info {
       flex-basis: 70%;
-      // border: 1px solid #d1c6c6;
+
       height: auto;
       overflow-y: auto;
       padding: 0;
@@ -129,8 +115,6 @@
     }
     &__img {
       img {
-        // object-fit: contain;
-        // height: 100%;
         width: 120px;
       }
     }

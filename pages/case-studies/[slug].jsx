@@ -13,10 +13,6 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Nav from "@/components/Nav";
 import { useInView } from "react-intersection-observer";
 
-// const contentfulLoader = ({ src }) => {
-//   return src;
-// };
-
 const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {

@@ -1,11 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
-
-// react-icons
-import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
-import { RiComputerLine } from "react-icons/ri";
-import { VscFolderOpened } from "react-icons/vsc";
-import { RiMessage2Line } from "react-icons/ri";
 
 function Nav({
   introActive,
@@ -15,65 +8,7 @@ function Nav({
   prototypeActive,
   testActive,
 }) {
-  const [activeNav, setActiveNav] = useState("#");
-  const [tooltip, setTooltip] = useState(true);
-  const handleActiveNav = (urlFragment) => {
-    setActiveNav(urlFragment);
-  };
-
   return (
-    // <nav className="nav">
-    //   {/* header */}
-    //   <a
-    //     className={headerActive ? "active" : ""}
-    //     href="#empathize"
-    //     onMouseEnter={() => setTooltip(!tooltip)}
-    //     onMouseLeave={() => setTooltip(!tooltip)}
-    //   >
-    //     {tooltip ? (
-    //       <span className="tooltip tooltip--hide">Empathize</span>
-    //     ) : (
-    //       <span className="tooltip tooltip--show">Empathize</span>
-    //     )}
-    //     <AiOutlineHome />
-    //   </a>
-
-    //   {/* about */}
-    //   <a className={aboutActive ? "active" : ""} href="#define">
-    //     <AiOutlineUser />
-    //   </a>
-
-    //   {/* experience */}
-    //   <a className={experienceActive ? "active" : ""} href="#ideate">
-    //     <RiComputerLine />
-    //   </a>
-
-    //   {/* portfoliio */}
-    //   <a className={portfolioActive ? "active" : ""} href="#prototype">
-    //     <VscFolderOpened />
-    //   </a>
-
-    //   {/* contact */}
-    //   <a className={contactActive ? "active" : ""} href="#test">
-    //     <RiMessage2Line />
-    //   </a>
-
-    //   {/* <Link className="custom" href="#contact2" passHref>
-    //     {tooltip ? (
-    //       <p className="tooltip tooltip--hide">tooltip</p>
-    //     ) : (
-    //       <p className="tooltip tooltip--show">tooltip</p>
-    //     )}
-
-    //     <a
-    //       className={contactActive ? "active" : ""}
-    //       onClick={() => setTooltip(!tooltip)}
-    //     >
-    //       <RiMessage2Line />
-    //     </a>
-    //   </Link> */}
-    // </nav>
-
     <nav id="menuBar">
       <ul>
         <li>

@@ -11,7 +11,6 @@ function SideProfile() {
         <div className="side-profile__img">
           <Image
             src="/Assets/placeholder-min.png"
-            // src="/Assets/pp00.png"
             // fill
             // width={1199}
             // height={615}

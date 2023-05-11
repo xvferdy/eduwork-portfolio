@@ -17,10 +17,6 @@ function CaseStudyCard({ caseStudy }) {
     projectWorkflow,
   } = caseStudy;
 
-  // const { img } = caseStudy.fields.projectMockup.fields.file.url;
-
-  // console.log(caseStudy.fields.projectMockup);
-
   return (
     <section className="card">
       <div className="container card__container">
@@ -45,7 +41,6 @@ function CaseStudyCard({ caseStudy }) {
             ))}
           </div>
           <h2 className="card__title">{title}</h2>
-          {/* <p className="card__brief">{thumbBrief}</p> */}
           <div className="card__brief">
             <ReactMarkdown>{thumbBrief}</ReactMarkdown>
           </div>

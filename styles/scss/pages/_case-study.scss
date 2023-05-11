@@ -249,7 +249,10 @@
   @include display(sm-phone) {
     .intro {
       .bottom {
-        grid-template-columns: 1fr;
+        .left,
+        .right {
+          grid-template-columns: 1fr;
+        }
       }
     }
   }

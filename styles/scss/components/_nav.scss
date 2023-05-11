@@ -8,26 +8,18 @@ nav {
   transform: translateY(-50%);
   margin: auto 0;
   // background-color: #fefefe;
-  // background-color: #181818;
-  // background-color: $color-neutral-90;
-  // background-color: #28283b;
 
-  // background-image: linear-gradient(
-  //   to right,
-  //   #fafafa,
-  //   #e7e7e7,
-  //   #d5d5d5,
-  //   #c3c3c3,
-  //   #b1b1b1
-  // );
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(3.9px);
-
-  // background: radial-gradient(
-  //   666px at 0.4% 48%,
-  //   rgb(202, 204, 227) 0%,
-  //   rgb(89, 89, 99) 97.5%
-  // );
+  background-image: linear-gradient(
+    to right,
+    #fafafa,
+    #e7e7e7,
+    #d5d5d5,
+    #c3c3c3,
+    #b1b1b1
+  );
+  // background: rgba(255, 255, 255, 0.8);
+  // backdrop-filter: blur(3.9px);
+  // -webkit-backdrop-filter: blur(9.9px);
 
   border-radius: 30px;
   border-radius: 25px;
@@ -132,14 +124,14 @@ nav {
     top: 90%;
     left: 50%;
     transform: translateX(-50%);
-    // background-image: linear-gradient(
-    //   to bottom,
-    //   #fafafa,
-    //   #e7e7e7,
-    //   #d5d5d5,
-    //   #c3c3c3,
-    //   #b1b1b1
-    // );
+    background-image: linear-gradient(
+      to bottom,
+      #fafafa,
+      #e7e7e7,
+      #d5d5d5,
+      #c3c3c3,
+      #b1b1b1
+    );
 
     ul {
       flex-flow: row;

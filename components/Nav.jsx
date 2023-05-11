@@ -13,6 +13,7 @@ function Nav({
       <ul>
         <li>
           <a
+            aria-label="Brief"
             className={introActive ? "home menu menu--active" : "home menu"}
             href="#intro"
           >
@@ -30,6 +31,7 @@ function Nav({
         </li>
         <li>
           <a
+            aria-label="Discover"
             className={empathizeActive ? "menu menu--active" : "menu"}
             href="#empathize"
           >
@@ -47,6 +49,7 @@ function Nav({
         </li>
         <li>
           <a
+            aria-label="Define"
             className={defineActive ? "menu menu--active" : "menu"}
             href="#define"
           >
@@ -64,6 +67,7 @@ function Nav({
         </li>
         <li>
           <a
+            aria-label="Ideate"
             className={ideateActive ? "menu menu--active" : "menu"}
             href="#ideate"
           >
@@ -81,6 +85,7 @@ function Nav({
         </li>
         <li>
           <a
+            aria-label="Design"
             className={prototypeActive ? "menu menu--active" : "menu"}
             href="#prototype"
           >
@@ -97,7 +102,11 @@ function Nav({
           </a>
         </li>
         <li>
-          <a className={testActive ? "menu menu--active" : "menu"} href="#test">
+          <a
+            aria-label="Test"
+            className={testActive ? "menu menu--active" : "menu"}
+            href="#test"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 384 512"

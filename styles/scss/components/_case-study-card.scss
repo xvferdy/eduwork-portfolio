@@ -40,13 +40,18 @@
 
   &__mockup {
     flex-basis: 50%;
-    display: grid;
-    place-items: center;
+    // display: grid;
+    // place-items: center;
     max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      // height: 100%;
+      // width: 100%;
+      height: 100%;
       // width: auto;
       // height: auto;
+      object-fit: scale-down;
     }
   }
 

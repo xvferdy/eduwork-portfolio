@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import SideProfile from "@/components/SideProfile";
 import CaseStudyList from "@/components/CaseStudyList";
 import { createClient } from "contentful";

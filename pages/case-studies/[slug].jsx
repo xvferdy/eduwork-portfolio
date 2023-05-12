@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
@@ -9,7 +8,7 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import ReactMarkdown from "react-markdown";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { AiFillHome } from "react-icons/ai";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Nav from "@/components/Nav";
 import { useInView } from "react-intersection-observer";
 

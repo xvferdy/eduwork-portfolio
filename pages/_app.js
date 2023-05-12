@@ -2,7 +2,6 @@ import "@/styles/scss/main.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { Raleway } from "@next/font/google";
-import { useEffect } from "react";
 
 const raleway = Raleway({
   weight: ["300", "400", "500", "600", "700", "800", "900"],

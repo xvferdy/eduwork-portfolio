@@ -4,32 +4,12 @@ import Head from "next/head";
 import Chip from "@/components/Chip";
 import Divider from "@/components/Divider";
 import { createClient } from "contentful";
-import { BLOCKS } from "@contentful/rich-text-types";
-import ReactMarkdown from "react-markdown";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { AiFillHome } from "react-icons/ai";
 import { motion, useScroll } from "framer-motion";
 import Nav from "@/components/Nav";
 import { useInView } from "react-intersection-observer";
-
-const options = {
-  renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      // console.log(node.data.target.fields.file.url);
-      return (
-        <Image
-          src={`https:${node.data.target.fields.file.url}`}
-          // src={node.data.target.fields.file.url}
-          // height={node.data.target.fields.file.details.image.height}
-          // width={node.data.target.fields.file.details.image.width}
-          height={540}
-          width={960}
-          alt={node.data.target.fields.title}
-        />
-      );
-    },
-  },
-};
+import { options } from "../../utils/contentful-render";
 
 function CaseStudy({ caseStudy }) {
   const {
@@ -50,7 +30,7 @@ function CaseStudy({ caseStudy }) {
     ideateContent,
     prototypeContent,
     testContent,
-    takeaways,
+    outcomes,
     learnings,
   } = caseStudy.fields;
 
@@ -151,11 +131,10 @@ function CaseStudy({ caseStudy }) {
             <div className="intro__brief">
               <h3>Project Brief</h3>
               {documentToReactComponents(projectBrief, options)}
-              {/* <ReactMarkdown>{projectBrief}</ReactMarkdown> */}
             </div>
             <div className="intro__goals">
               <h3>Project Goals</h3>
-              <ReactMarkdown>{projectGoals}</ReactMarkdown>
+              {documentToReactComponents(projectGoals, options)}
             </div>
             <div className="bottom">
               <div className="left">
@@ -170,17 +149,17 @@ function CaseStudy({ caseStudy }) {
                 </div>
                 <div className="intro__duration">
                   <h3>Project Duration</h3>
-                  <ReactMarkdown>{projectDuration}</ReactMarkdown>
+                  <p>{projectDuration}</p>
                 </div>
               </div>
               <div className="right">
                 <div className="intro__role">
                   <h3>Role</h3>
-                  <ReactMarkdown>{role}</ReactMarkdown>
+                  <p>{role}</p>
                 </div>
                 <div className="intro__type">
                   <h3>Project Type</h3>
-                  <ReactMarkdown>{projectType}</ReactMarkdown>
+                  <p>{projectType}</p>
                 </div>
               </div>
             </div>
@@ -320,7 +299,7 @@ function CaseStudy({ caseStudy }) {
           <div className="container outcomes__container">
             <h2>Outcomes</h2>
             <div className="outcomes__content">
-              <ReactMarkdown>{takeaways}</ReactMarkdown>
+              {documentToReactComponents(outcomes, options)}
             </div>
           </div>
         </section>
@@ -330,7 +309,7 @@ function CaseStudy({ caseStudy }) {
           <div className="container learnings__container">
             <h2>Learnings</h2>
             <div className="learnings__content">
-              <ReactMarkdown>{learnings}</ReactMarkdown>
+              {documentToReactComponents(learnings, options)}
             </div>
           </div>
         </section>

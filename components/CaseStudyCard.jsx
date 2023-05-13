@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Chip from "@/components/Chip";
 import { FaLocationArrow } from "react-icons/fa";
-import ReactMarkdown from "react-markdown";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { options } from "../utils/contentful-render";
 
 function CaseStudyCard({ caseStudy }) {
   const {
@@ -42,7 +43,7 @@ function CaseStudyCard({ caseStudy }) {
           </div>
           <h2 className="card__title">{title}</h2>
           <div className="card__brief">
-            <ReactMarkdown>{thumbBrief}</ReactMarkdown>
+            {documentToReactComponents(thumbBrief, options)}
           </div>
 
           <Link

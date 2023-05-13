@@ -2,6 +2,7 @@ import Head from "next/head";
 import SideProfile from "@/components/SideProfile";
 import CaseStudyList from "@/components/CaseStudyList";
 import { createClient } from "contentful";
+
 export default function Home({ caseStudies }) {
   return (
     <>

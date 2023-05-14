@@ -59,8 +59,8 @@ function CaseStudyCard({ caseStudy }) {
         <div className="card__mockup">
           <Image
             src={`https:${projectMockup.fields.file.url}`}
-            height={568}
-            width={285}
+            height={480}
+            width={640}
             // priority
             // fill
             alt="Preview"

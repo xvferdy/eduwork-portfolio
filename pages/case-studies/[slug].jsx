@@ -99,7 +99,7 @@ function CaseStudy({ caseStudy }) {
             <div className="banner__mockup">
               <Image
                 src={`https:${projectMockup.fields.file.url}`}
-                height={480}
+                height={640}
                 width={480}
                 // priority
                 // fill

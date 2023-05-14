@@ -5,7 +5,7 @@ nav {
   height: fit-content;
   right: 20px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(0, -50%);
   margin: auto 0;
   // background-color: #fefefe;
 
@@ -133,9 +133,10 @@ nav {
   // MEDIA-QUERIES
   @include display(tab-port) {
     width: fit-content;
-    top: 90%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 100%;
+    right: 50%;
+    transform: translate(50%, -150%);
+
     // background-image: linear-gradient(
     //   to bottom,
     //   #fafafa,
@@ -199,8 +200,8 @@ nav {
         .menu {
           // padding: 10px 8px;
           svg {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
           }
         }
       }

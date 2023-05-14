@@ -1,4 +1,11 @@
 import React from "react";
+import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { RiComputerLine } from "react-icons/ri";
+import { VscFolderOpened } from "react-icons/vsc";
+import { RiMessage2Line } from "react-icons/ri";
+import { BsLinkedin } from "react-icons/bs";
+import { SiFrontendmentor } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
 
 function Nav({
   introActive,

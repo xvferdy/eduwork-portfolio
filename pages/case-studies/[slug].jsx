@@ -99,8 +99,8 @@ function CaseStudy({ caseStudy }) {
             <div className="banner__mockup">
               <Image
                 src={`https:${projectMockup.fields.file.url}`}
-                height={568}
-                width={285}
+                height={480}
+                width={480}
                 // priority
                 // fill
                 // alt="food"
@@ -297,7 +297,7 @@ function CaseStudy({ caseStudy }) {
         {/* OUTCOMES */}
         <section className="outcomes">
           <div className="container outcomes__container">
-            <h2>Outcomes</h2>
+            <h2>Outcomes 🎉</h2>
             <div className="outcomes__content">
               {documentToReactComponents(outcomes, options)}
             </div>

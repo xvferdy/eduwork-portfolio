@@ -297,7 +297,7 @@ function CaseStudy({ caseStudy }) {
         {/* OUTCOMES */}
         <section className="outcomes">
           <div className="container outcomes__container">
-            <h2>Outcomes 🎉</h2>
+            <h2>Conclusion 🎉</h2>
             <div className="outcomes__content">
               {documentToReactComponents(outcomes, options)}
             </div>

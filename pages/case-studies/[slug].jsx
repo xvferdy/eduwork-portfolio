@@ -129,11 +129,11 @@ function CaseStudy({ caseStudy }) {
           <div className="container intro__container">
             <h2>Introduction</h2>
             <div className="intro__brief">
-              <h3>Project Brief</h3>
+              <h3>Project Brief 👀</h3>
               {documentToReactComponents(projectBrief, options)}
             </div>
             <div className="intro__goals">
-              <h3>Project Goals</h3>
+              <h3>Project Goals 🚀</h3>
               {documentToReactComponents(projectGoals, options)}
             </div>
             <div className="bottom">

@@ -269,7 +269,7 @@ function CaseStudy({ caseStudy }) {
             </motion.div>
             {documentToReactComponents(prototypeContent, options)}
           </div>
-          <div ref={testRef} id="test" style={{ height: "1px" }} />
+          <div ref={testRef} id="validate" style={{ height: "1px" }} />
         </section>
 
         {/* TEST */}

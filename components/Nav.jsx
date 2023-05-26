@@ -67,12 +67,12 @@ function Nav({
         </li>
         <li>
           <a
-            aria-label="Test"
+            aria-label="Validate"
             className={testActive ? "menu menu--active" : "menu"}
-            href="#test"
+            href="#validate"
           >
             <MdTask />
-            <span>Test</span>
+            <span>Validate</span>
           </a>
         </li>
       </ul>

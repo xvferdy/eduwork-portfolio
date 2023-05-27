@@ -5,7 +5,8 @@
   border-radius: 8px;
   overflow: hidden;
   &__container {
-    height: 780px;
+    // height: 780px;
+    min-height: calc(100vh - 60px - 36px);
     gap: 60px;
     padding: 60px;
 

@@ -323,8 +323,8 @@ function CaseStudy({ caseStudy }) {
           <p>
             Thank you for reading! I'd love to hear of any feedback from you for
             this article. Say hi to me at{" "}
-            <a className="email" href="mailto:xv.ferdy@gmail.com">
-              xv.ferdy@gmail.com
+            <a className="email" href="mailto:berlianto.jobs@gmail.com">
+              berlianto.jobs@gmail.com
             </a>
           </p>
           <Link className="btn btn--primary" href={`/`} scroll={false}>

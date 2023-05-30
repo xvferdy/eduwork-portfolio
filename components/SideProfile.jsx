@@ -27,8 +27,8 @@ function SideProfile() {
           <div className="side-profile__info-bio">
             <p>
               HEYLLOW folks!.... this is my journey exploring digital technology
-              in 2023, I'm currently focused on conquering my self. So grateful
-              to be sharing my world with you.
+              in 2023, very grateful to be sharing my world with you.
+              {/* I'm currently focused on conquering my self. */}
             </p>
             <p>UX Research ◉ UX Design ◉ UI Design</p>
           </div>

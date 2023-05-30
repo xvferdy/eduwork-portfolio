@@ -22,7 +22,7 @@ function SideProfile() {
         </div>
         <div className="side-profile__info">
           <div className="side-profile__info-name">
-            <h1>Ferdy. 🐳🎨</h1>
+            <h1>Ferdy.🎨</h1>
           </div>
           <div className="side-profile__info-bio">
             <p>

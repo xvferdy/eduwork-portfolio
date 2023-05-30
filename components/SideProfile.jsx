@@ -22,31 +22,38 @@ function SideProfile() {
         </div>
         <div className="side-profile__info">
           <div className="side-profile__info-name">
-            <h1>Ferdy. 🐳</h1>
+            <h1>Ferdy. 🐳🎨</h1>
           </div>
           <div className="side-profile__info-bio">
             <p>
-              HEYLLOW folks!.... my name is Ferdy and I'm currently focused on
-              conquering my self.
+              HEYLLOW folks!.... this is my journey exploring digital technology
+              in 2023, I'm currently focused on conquering my self. So grateful
+              to be sharing my world with you.
             </p>
-
-            <p>This is my journey exploring digital technology in 2023.</p>
-
-            <p>So grateful to be sharing my world with you.</p>
+            <p>UX Research ◉ UX Design ◉ UI Design</p>
           </div>
           <div className="side-profile__info-phone">
-            <p>
+            {/* <p>
               <BsTelephone /> +82292685156
-            </p>
+            </p> */}
+            <Link
+              href="https://api.whatsapp.com/send?phone=6282292685156"
+              target="_blank"
+            >
+              <BsTelephone /> +82292685156
+            </Link>
           </div>
           <div className="side-profile__info-email">
-            <p>
+            {/* <p>
               <MdAlternateEmail /> xv.ferdy@gmail.com
-            </p>
+            </p> */}
+            <Link href="mailto:berlianto.jobs@gmail.com" target="_blank">
+              <MdAlternateEmail /> berlianto.jobs@gmail.com
+            </Link>
           </div>
           <div className="side-profile__info-links">
             <Link
-              href="https://id.linkedin.com/in/berlianto-ferdynand-354819136?trk=public_profile_browsemap&original_referer=https%3A%2F%2Fwww.google.com%2F"
+              href="https://www.linkedin.com/in/berlianto-ferdynand-pongbubun/"
               title="Linkedin"
             >
               <Image
@@ -54,17 +61,6 @@ function SideProfile() {
                 width={24}
                 height={24}
                 alt="Linkedin"
-              />
-            </Link>
-            <Link
-              href="https://www.blogger.com/profile/16732934081090438699"
-              title="Blogspot"
-            >
-              <Image
-                src="/Assets/bloger-logo.png"
-                width={24}
-                height={24}
-                alt="Blogspot"
               />
             </Link>
             <Link href="https://medium.com/@berlianto.dev" title="Medium">
@@ -81,6 +77,14 @@ function SideProfile() {
                 width={24}
                 height={24}
                 alt="Behance"
+              />
+            </Link>
+            <Link href="https://dribbble.com/xvferdy" title="Dribbble">
+              <Image
+                src="/Assets/dribbble.png"
+                width={24}
+                height={24}
+                alt="Dribbble"
               />
             </Link>
           </div>

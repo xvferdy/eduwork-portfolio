@@ -30,22 +30,30 @@
     gap: 24px;
     padding-bottom: 72px;
     padding-right: 8px;
-
+    a {
+      // font-weight: bold;
+      color: $color-neutral-10;
+      text-decoration: underline;
+      transition: $transition;
+      &:hover {
+        color: $color-primary-green-50;
+      }
+    }
     &-bio {
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
     &-phone {
-      p {
-        display: flex;
+      a {
+        display: inline-flex;
         align-items: center;
         gap: 4px;
       }
     }
     &-email {
-      p {
-        display: flex;
+      a {
+        display: inline-flex;
         align-items: center;
         gap: 4px;
       }
@@ -53,8 +61,14 @@
     &-links {
       display: flex;
       gap: 24px;
-      img {
-        width: auto;
+      a {
+        border-bottom: 3px solid transparent;
+        &:hover {
+          transform: translateY(-3px);
+        }
+        img {
+          width: auto;
+        }
       }
     }
 

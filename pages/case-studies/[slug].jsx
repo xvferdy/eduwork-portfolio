@@ -48,6 +48,7 @@ function CaseStudy({ caseStudy }) {
         <meta name="description" content="Case Study Article" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/book.png" />
+        <base target="_blank" />
       </Head>
       <main className="case-study-main">
         {/* Scroll progress */}

@@ -9,10 +9,10 @@ export const options = {
         <Image
           src={`https:${node.data.target.fields.file.url}`}
           // src={node.data.target.fields.file.url}
-          // height={node.data.target.fields.file.details.image.height}
-          // width={node.data.target.fields.file.details.image.width}
-          height={540}
-          width={960}
+          height={node.data.target.fields.file.details.image.height}
+          width={node.data.target.fields.file.details.image.width}
+          // height={540}
+          // width={960}
           alt={node.data.target.fields.title}
         />
       );

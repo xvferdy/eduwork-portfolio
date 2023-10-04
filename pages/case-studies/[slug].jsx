@@ -50,6 +50,11 @@ function CaseStudy({ caseStudy }) {
         <link rel="icon" href="/book.png" />
       </Head>
       <main className="case-study-main">
+        {/* back btn */}
+        <Link className="btn btn--primary" href={`/`} scroll={false}>
+          <AiFillHome /> Home
+        </Link>
+
         {/* Scroll progress */}
         <motion.div
           className="progress-bar"

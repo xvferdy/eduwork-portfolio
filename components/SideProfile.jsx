@@ -10,7 +10,7 @@ function SideProfile() {
       <div className="container side-profile__container">
         <div className="side-profile__img">
           <Image
-            src="/Assets/pp02.png"
+            src="/Assets/pp03.webp"
             // fill
             // width={1199}
             // height={615}
